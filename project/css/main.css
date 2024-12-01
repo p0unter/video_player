@@ -1,0 +1,204 @@
+/*
+The main center where files are collected.
+Footnote: I felt the need to separate the files in this way so that they could be easily copied.
+*/
+/*
+Structure of Video Player
+Here we have defined the basic appearance of the video player. 
+*/
+.video-player-inclusive {
+  width: 100%;
+  height: 540px;
+  position: relative;
+  background-color: #000;
+  border-radius: 8px;
+  color: #fff;
+}
+@media (max-width: 1000px) {
+  .video-player-inclusive {
+    height: max-content;
+  }
+}
+.video-player-inclusive * {
+  margin: 0;
+  padding: 0;
+  cursor: default;
+  transition: 0.2s ease-out;
+}
+.video-player-inclusive .video-class-hover-op {
+  opacity: 0.8;
+}
+.video-player-inclusive .video-class-hover-op:hover {
+  opacity: 1;
+}
+.video-player-inclusive .video-source {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+@media (max-width: 1000px) {
+  .video-player-inclusive .video-source {
+    height: max-content;
+  }
+}
+.video-player-inclusive img {
+  height: 100%;
+  pointer-events: none;
+}
+.video-player-inclusive button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.video-player-inclusive button:hover {
+  opacity: 1;
+}
+.video-player-inclusive input[type=range] {
+  cursor: pointer;
+}
+.video-player-inclusive .video-controls-inclusive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+.video-player-inclusive .video-controls-inclusive .video-controls-top {
+  height: 11%;
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+@media (max-width: 650px) {
+  .video-player-inclusive .video-controls-inclusive .video-controls-top {
+    height: 18%;
+  }
+}
+@media (max-width: 650px) {
+  .video-player-inclusive .video-controls-inclusive .video-controls-top {
+    padding: 0 10px;
+  }
+}
+.video-player-inclusive .video-controls-inclusive .video-controls-top .video-top-left, .video-player-inclusive .video-controls-inclusive .video-controls-top .video-top-right {
+  width: 100%;
+}
+.video-player-inclusive .video-controls-inclusive .video-controls-top .video-top-left {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.video-player-inclusive .video-controls-inclusive .video-controls-top .video-top-left .video-brand {
+  width: max-content;
+  font-size: 1.2em;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  font-weight: 200;
+}
+@media (max-width: 650px) {
+  .video-player-inclusive .video-controls-inclusive .video-controls-top .video-top-left .video-brand {
+    font-size: 1em;
+  }
+}
+.video-player-inclusive .video-controls-inclusive .video-controls-top .video-top-right {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 18px;
+}
+.video-player-inclusive .video-controls-inclusive .video-controls-top .video-top-right button {
+  height: 50%;
+}
+.video-player-inclusive .video-controls-inclusive .video-controls-middle {
+  height: 77%;
+}
+@media (max-width: 650px) {
+  .video-player-inclusive .video-controls-inclusive .video-controls-middle {
+    height: 62%;
+  }
+}
+.video-player-inclusive .video-controls-inclusive .video-controls-bottom {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+  height: 12%;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 20px;
+  gap: 5px;
+}
+@media (max-width: 650px) {
+  .video-player-inclusive .video-controls-inclusive .video-controls-bottom {
+    height: 20%;
+  }
+}
+@media (max-width: 650px) {
+  .video-player-inclusive .video-controls-inclusive .video-controls-bottom {
+    padding: 0 10px;
+  }
+}
+.video-player-inclusive .video-controls-inclusive .video-controls-bottom .video-range-inclusive {
+  height: 20%;
+  width: 100%;
+}
+.video-player-inclusive .video-controls-inclusive .video-controls-bottom .video-range-inclusive #video-range {
+  width: 100%;
+  height: 100%;
+}
+.video-player-inclusive .video-controls-inclusive .video-controls-bottom .video-bottom-controls {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.video-player-inclusive .video-controls-inclusive .video-controls-bottom .video-bottom-controls .video-bottom-items {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+@media (max-width: 650px) {
+  .video-player-inclusive .video-controls-inclusive .video-controls-bottom .video-bottom-controls .video-bottom-items {
+    gap: 8px;
+  }
+}
+.video-player-inclusive .video-controls-inclusive .video-controls-bottom .video-bottom-controls .video-bottom-items button {
+  height: 65%;
+  width: 30px;
+}
+.video-player-inclusive .video-controls-inclusive .video-controls-bottom .video-bottom-controls .video-control-bottom-left {
+  justify-content: left;
+}
+.video-player-inclusive .video-controls-inclusive .video-controls-bottom .video-bottom-controls .video-control-bottom-left #video-volume-range {
+  width: 70px;
+}
+.video-player-inclusive .video-controls-inclusive .video-controls-bottom .video-bottom-controls .video-control-bottom-left .time-indicator {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 5px;
+}
+.video-player-inclusive .video-controls-inclusive .video-controls-bottom .video-bottom-controls .video-control-bottom-right {
+  justify-content: right;
+}
+.video-player-inclusive .video-controls-inclusive .video-controls-bottom .video-bottom-controls .video-control-bottom-right #video-options-button:hover {
+  transform: rotate(-45deg);
+}
+.video-player-inclusive .video-controls-inclusive .video-controls-bottom .video-bottom-controls .video-control-bottom-right #video-fullscreen-button:hover {
+  transform: scale(1.1);
+}
+
+/*# sourceMappingURL=main.css.map */
