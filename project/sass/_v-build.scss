@@ -42,7 +42,7 @@ Here we have defined the basic appearance of the video player.
 
         .video-controls-top {
             height: 11%;
-            @media (max-width: 650px) {
+            @media (max-width: 850px) {
                 height: 18%;
             }
             border-radius: 8px 8px 0 0; // It is used to make the edges of the video oval shaped.
@@ -52,7 +52,7 @@ Here we have defined the basic appearance of the video player.
             display: flex;
             align-items: center; justify-content: space-between;
             padding: 0 20px;
-            @media (max-width: 650px) {
+            @media (max-width: 850px) {
                 padding: 0 10px;
             }
 
@@ -88,16 +88,22 @@ Here we have defined the basic appearance of the video player.
 
         .video-controls-middle {
             height: 77%;
-            @media (max-width: 650px) {
+            @media (max-width: 850px) {
                 height: 62%;
+            }
+            @media (max-width: 450px) {
+                height: 57%;
             }
         }
 
         .video-controls-bottom {
             background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
             height: 12%;
-            @media (max-width: 650px) {
+            @media (max-width: 850px) {
                 height: 20%;
+            }
+            @media (max-width: 450px) {
+                height: 25%;
             }
             border-radius: 0 0 20px 20px;
 
@@ -105,7 +111,7 @@ Here we have defined the basic appearance of the video player.
             align-items: center;
             flex-direction: column;
             padding: 0 20px;
-            @media (max-width: 650px) {
+            @media (max-width: 850px) {
                 padding: 0 10px;
             }   
             gap: 5px;
@@ -116,7 +122,12 @@ Here we have defined the basic appearance of the video player.
                 width: 100%;
                 #video-range {
                     width: 100%;
-                    height: 100%;
+                    height: 20px;
+                    font-size: 1em;
+	                // --thumb-height: 0em;
+                    // &:hover {
+	                //     --thumb-height: 1.125em;
+                    // }
                 }
             }
 
@@ -133,7 +144,7 @@ Here we have defined the basic appearance of the video player.
                     display: flex;
                     align-items: center;
                     gap: 18px;
-                    @media (max-width: 650px) {
+                    @media (max-width: 850px) {
                         gap: 8px;
                     }
 
